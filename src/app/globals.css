@@ -1,33 +1,288 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+/* Navbar styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #333; /* Background color */
+  color: #fff; /* Text color */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+.navbar div {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav ul {
+  display: flex;
+  gap: 1rem;
+  list-style-type: none;
+}
+
+.nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s;
+  padding: 20px 20px 20px 20px;
+}
+
+.nav a:hover {
+  color: #ddd; /* Hover color */
+}
+
+/* Responsive styling for small screens */
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+/* herosection */
+/* Hero Section Styling */
+/* Hero Section Styling */
+.herosection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: grey; /* Light pink background */
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
+  height: 70vh; /* Reduced height */
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+.leftside {
+  flex: 1;
+  margin-right: 2rem; /* Space between h1 and image */
+}
+
+.rightside {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+/* Animation for Fade-In */
+@keyframes fadeIn {
+  0% {
+    opacity: 0; /* Starting state (completely transparent) */
+  }
+  100% {
+    opacity: 1; /* Ending state (fully visible) */
   }
 }
+
+/* Leftside Heading */
+.leftside h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin: 0;
+  animation: fadeIn 2s ease-in-out; /* Applying fadeIn animation */
+}
+
+
+.leftside p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-top: 0.5rem;
+}
+
+/* Fade-in animation for the h1 tag */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Styling for Small Screens */
+@media (max-width: 768px) {
+  .herosection {
+    flex-direction: column; /* Stack items vertically */
+    text-align: center;
+    height: auto; /* Auto height for smaller screens */
+  }
+
+  .leftside {
+    margin-right: 0; /* Remove space for centered layout */
+  }
+
+  .rightside {
+    margin-top: 1rem;
+  }
+
+  .leftside h1 {
+    font-size: 2rem; /* Smaller font size on small screens */
+  }
+
+  .leftside p {
+    font-size: 1rem; /* Adjust font size */
+  }
+}
+/* about section */
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Skills Container */
+.skills-container {
+  width: 100%;
+  max-width:max-content;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Header */
+.skills-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.skills-header h2 {
+  font-size: 2rem;
+  color: #333;
+}
+
+/* Skills List */
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+/* Individual Skill Item */
+.skill-item {
+  width: 45%;
+  display: flex;
+  align-items: center;
+  background-color: #f0f0f0;
+  padding: 15px;
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+}
+
+.skill-item:hover {
+  transform: scale(1.05);
+}
+
+.skill-icon {
+  font-size: 1.8rem;
+  margin-right: 10px;
+  color: #4a90e2;
+}
+
+.skill-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .skill-item {
+    width: 100%;
+  }
+
+  .skills-header h2 {
+    font-size: 1.8rem;
+  }
+}
+/* Basic Styling for Paragraph */
+.paragraph {
+  font-size: 1rem; /* Default font size */
+  line-height: 1.6; /* Line height for better readability */
+  text-align: center; /* Center align the text */
+  margin: 20px; /* Adding margin to the paragraph */
+  padding: 10px; /* Padding for some internal spacing */
+  background-color: #f4f4f9; /* Light background color for contrast */
+  border-radius: 8px; /* Rounded corners */
+  color: #333; /* Text color */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for better visibility */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .paragraph {
+    font-size: 0.9rem; /* Slightly smaller font on medium screens */
+    margin: 15px; /* Less margin on smaller screens */
+    padding: 15px; /* More padding for better readability */
+  }
+}
+
+@media (max-width: 480px) {
+  .paragraph {
+    font-size: 0.8rem; /* Even smaller font size for mobile */
+    margin: 10px; /* Even less margin */
+    padding: 10px; /* Adjust padding for mobile screens */
+  }
+}
+
+/* contact */
+
+.contact-form-container {
+  
+  width: 100%;
+  max-width: 1000px;
+  background-color: gray;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+  font-size: 1rem;
+  color: #555;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
