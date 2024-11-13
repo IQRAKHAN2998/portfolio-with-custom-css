@@ -239,7 +239,7 @@
 .contact-form-container {
   
   width: 100%;
-  max-width: 1000px;
+  max-width: max-content;
   background-color: gray;
   padding: 30px;
   border-radius: 8px;
