@@ -11,7 +11,8 @@ const About = () => {
                 developer dedicated to creating visually stunning and
                 user-friendly web experiences. With a strong foundation in HTML,
                 CSS, and JavaScript, I craft responsive designs that adapt seamlessly
-                to all screen sizes. I thrive on turning complex ideas into intuitive and engaging digital solutions, focusing on performance, accessibility, and smooth interactions.</p>
+                to all screen sizes. I thrive on turning complex ideas into intuitive and engaging digital solutions, 
+                focusing on performance, accessibility, and smooth interactions.</p>
             <div className="skills-list">
                 <div className="skill-item">
                     <span className="skill-icon">🌐</span>
